@@ -1,16 +1,99 @@
-# React + Vite
+# Kapzo Bioactives
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern website for Kapzo Bioactives - providing comprehensive bioactive ingredient solutions for food, nutraceutical, cosmetic, and pharmaceutical industries.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Multi-page website** with Home, About, Products, Industries, and Contact pages
+- **Dark mode support** with persistent user preference
+- **Responsive design** - works seamlessly on desktop, tablet, and mobile
+- **Co-founder profiles** with direct contact information
+- **Product & Industry showcase** with detailed information
+- **Smooth routing** with React Router
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - UI framework
+- **React Router DOM** - Client-side routing
+- **Vite** - Build tool and development server
+- **CSS3** - Styling with CSS variables for theme support
+- **JavaScript (ES6+)** - Modern JavaScript
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd kapzobio
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+## Running Locally
+
+Start the development server:
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5174`
+
+## Building for Production
+
+Create an optimized production build:
+```bash
+npm run build
+```
+
+## Deployment
+
+Deploy to Cloudflare Pages:
+```bash
+npm install -g wrangler
+wrangler login
+wrangler pages deploy dist
+```
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable components (Header, Hero, etc.)
+├── pages/              # Full page components (Products, Industries, Contact)
+├── context/            # React Context (DarkModeContext)
+├── assets/             # Images and static files
+├── App.jsx             # Main app component with router
+└── App.css             # Global styles with CSS variables
+
+public/
+└── assets/             # Static assets (logos, images)
+```
+
+## Pages
+
+- **Home** - Landing page with hero, products, industries, and why choose section
+- **About** - Company information, mission, and vision
+- **Products** - Detailed product categories with descriptions
+- **Industries** - Industry-specific solutions
+- **Contact** - Meet our co-founders section
+
+## Co-Founders
+
+- **Dr. Arun Kasturi** - MBBS
+  - Email: arun@kapzobioactives.com
+  - Phone: +91 6383981422
+
+- **Kishore Kasturi** - B.Tech, IIT BHU
+  - Email: kishorekasturi28@gmail.com
+  - Phone: +91 7993575899
+
+## Dark Mode
+
+Toggle dark mode using the sun/moon icon in the header. Your preference is automatically saved.
+
+## License
+
+Private project - Kapzo Bioactives
