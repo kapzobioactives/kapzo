@@ -23,7 +23,7 @@ name = "kapzobio-development"
 format = "modules"
 
 # Rules for static files
-[build.upload.rules]
+[[build.upload.rules]]
 type = "CompiledContentType"
 globs = ["**/*.wasm"]
 fallthrough = true
