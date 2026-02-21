@@ -1,0 +1,46 @@
+#:schema ./node_modules/wrangler/config-schema.json
+name = "kapzobio"
+type = "javascript"
+main = "src/main.jsx"
+compatibility_date = "2025-02-21"
+
+# Build configuration
+[build]
+command = "npm run build"
+cwd = "./"
+root = "."
+
+# Vite configuration for Cloudflare Pages
+[env.production]
+name = "kapzobio-production"
+
+# Dev environment
+[env.development]
+name = "kapzobio-development"
+
+# Build watch paths
+[build.upload]
+format = "modules"
+
+# Rules for static files
+[build.upload.rules]
+type = "CompiledContentType"
+globs = ["**/*.wasm"]
+fallthrough = true
+
+[[build.upload.rules]]
+type = "Text"
+globs = ["**/*.html", "**/*.css", "**/*.js", "**/*.svg", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.webp", "**/*.woff2", "**/*.woff", "**/*.ttf"]
+fallthrough = true
+
+# Site configuration
+[site]
+bucket = "./dist"
+
+# Workers configuration (if needed)
+[triggers]
+crons = []
+
+# Observability
+[observability]
+enabled = false
